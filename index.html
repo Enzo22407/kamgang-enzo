@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Méta-données Principales -->
+  <title>KAMGANG TALLA ENZO WARREN | Développeur Full-Stack & Community Manager / Marketing Digital</title>
+  <meta name="description" content="Portfolio officiel de KAMGANG TALLA ENZO WARREN : Développeur Full-Stack, Community Manager & Expert Marketing Digital à Douala / Yaoundé, Cameroun. Création d'applications web/mobiles et stratégies de croissance digitale.">
+  <meta name="keywords" content="KAMGANG TALLA ENZO WARREN, Enzo Warren, Développeur Full-Stack Cameroun, Community Manager Cameroun, Marketing Digital Douala, React, Next.js, Node.js, Meta Ads, SEO Cameroun">
+  <meta name="author" content="KAMGANG TALLA ENZO WARREN">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kamgang-enzo.vercel.app/">
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kamgang-enzo.vercel.app/">
+  <meta property="og:title" content="KAMGANG TALLA ENZO WARREN | Portfolio Numérique Interactif">
+  <meta property="og:description" content="Développeur Full-Stack, Community Manager & Expert Marketing Digital. Découvrez mes projets, compétences et contactez-moi directement.">
+  <meta property="og:image" content="https://kamgang-enzo.vercel.app/assets/img/enzo-profile.png">
+  <meta property="og:image:alt" content="Portrait de KAMGANG TALLA ENZO WARREN">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KAMGANG TALLA ENZO WARREN | Développeur & Stratège Digital">
+  <meta name="twitter:description" content="Portfolio interactif : Solutions logicielles modernes, acquisition digitale et gestion de communautés.">
+  <meta name="twitter:image" content="https://kamgang-enzo.vercel.app/assets/img/enzo-profile.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/enzo-profile.png">
+
+  <!-- Données Structurées JSON-LD pour Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "KAMGANG TALLA ENZO WARREN",
+    "alternateName": "Enzo Warren",
+    "url": "https://kamgang-enzo.vercel.app/",
+    "image": "https://kamgang-enzo.vercel.app/assets/img/enzo-profile.png",
+    "jobTitle": "Full-Stack Software Developer, Community Manager & Digital Marketer",
+    "email": "mailto:enzowarren237@gmail.com",
+    "telephone": ["+237687935401", "+237682538959"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "CM"
+    },
+    "knowsAbout": [
+      "Full-Stack Web Development",
+      "React",
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+      "Community Management",
+      "Digital Marketing",
+      "Social Media Strategy",
+      "SEO & SEA",
+      "Meta Ads",
+      "Google Ads"
+    ]
+  }
+  </script>
+
+  <!-- Feuilles de styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Canvas d'Aurore et Météores d'Arrière-Plan -->
+  <canvas id="meteorCanvas" class="meteor-canvas"></canvas>
+
+  <!-- Navbar Flottante -->
+  <nav class="navbar" id="mainNavbar">
+    <a href="#hero" class="logo-container" aria-label="Accueil - Enzo Warren">
+      <div class="abstract-logo">
+        <span class="dot"></span>
+      </div>
+      <span class="logo-text">Warren.</span>
+    </a>
+
+    <!-- Menu Mobile Toggle -->
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Basculer le menu mobile">
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Contenu Navigation -->
+    <div class="nav-content" id="navContent">
+      <ul class="nav-links">
+        <li><a href="#hero" class="active" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="#about" data-i18n="nav_about">À Propos</a></li>
+        <li><a href="#projects" data-i18n="nav_projects">Projets</a></li>
+        <li><a href="#certs-list" data-i18n="nav_certs">Certifications</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <!-- Bouton Bascule de Langue -->
+        <button id="langToggleBtn" class="ctrl-btn lang-btn" title="Changer de langue / Switch Language" aria-label="Changer de langue">
+          <span class="lang-label" id="langLabel">EN</span>
+          <span class="lang-icon">
+            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </span>
+        </button>
+
+        <!-- Bouton Bascule Thème Dark / Light -->
+        <button id="themeToggleBtn" class="ctrl-btn theme-btn" title="Passer en mode clair" aria-label="Basculer le thème">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Action Recrutement Rapide -->
+        <div class="nav-action">
+          <a href="#contact" class="highlight-btn btn-primary" data-i18n="nav_hire_me">Me Recruter</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1 : HERO SECTION -->
+  <header id="hero" class="hero-container">
+    <div class="digital-grid"></div>
+    <div class="stick-repeat">
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+
+    <div class="left-content-header">
+      <span class="welcome-badge animate-item delay-1" data-i18n="hero_badge">Bonjour, je suis</span>
+      <h1 class="hero-name animate-item delay-2">KAMGANG TALLA<br>ENZO WARREN</h1>
+      <h2 class="main-subtitle animate-item delay-3" data-i18n="hero_subtitle">Développeur Full-Stack & Stratège Marketing Digital / Community Manager</h2>
+      
+      <div class="specialty-tags animate-item delay-4">
+        <span class="specialty-tag highlight">#CommunityManager</span>
+        <span class="specialty-tag highlight">#DigitalMarketing</span>
+        <span class="specialty-tag">#React & Next.js</span>
+        <span class="specialty-tag">#Meta & Google Ads</span>
+        <span class="specialty-tag">#GrowthHacking</span>
+        <span class="specialty-tag">#Automation</span>
+      </div>
+
+      <p class="short-bio animate-item delay-4" data-i18n="hero_bio">
+        J'architecture des applications web & mobiles robustes et je conçois des stratégies digitales à fort impact. Expert en écosystèmes modernes (React, Next.js, Node.js), growth marketing et animation de communautés engagées.
+      </p>
+
+      <div class="hero-buttons animate-item delay-5">
+        <a href="#contact" class="highlight-btn btn-primary" data-i18n="hero_contact_btn">Me Contacter</a>
+        <a href="#projects" class="highlight-btn btn-secondary" data-i18n="hero_explore_btn">Explorer mes Projets</a>
+      </div>
+    </div>
+
+    <!-- Visuel 3D Interactif -->
+    <div class="right-content-header animate-item delay-6">
+      <div class="image-3d-wrapper" id="heroTiltCard">
+        <img src="assets/img/enzo-profile.png?v=2" alt="KAMGANG TALLA ENZO WARREN" class="image-layer">
+        <div class="floating-status-card">
+          <span class="status-dot-pulse"></span>
+          <span class="status-text" data-i18n="hero_status">Disponible pour nouveaux projets</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2 : À PROPOS (ABOUT) -->
+  <section id="about" class="about-container">
+    <div class="digital-grid"></div>
+    <div class="about-content-wrapper">
+      
+      <!-- Colonne Image avec effet Grayscale Hover -->
+      <div class="about-image-col animate-left delay-1">
+        <div class="image-wrapper">
+          <img src="assets/img/enzo-profile.png?v=2" alt="Enzo Warren Portrait" class="grayscale-img">
+          <div class="experience-badge hover-float">
+            <div class="badge-content">
+              <span class="years" data-i18n="exp_badge_years">03+</span>
+              <span class="text" data-i18n="exp_badge_text">Ans d'Expérience<br>Tech & Marketing</span>
+            </div>
+            <div class="badge-decor"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colonne Texte & Compétences -->
+      <div class="about-text-col glass-card animate-right delay-2">
+        <h2 class="section-title" data-i18n="about_title">Découvrez mon Parcours & ma Double Expertise !</h2>
+        <p class="about-description" data-i18n="about_desc">
+          Passionné par l'alliance entre ingénierie logicielle et croissance digitale, je transforme les idées audacieuses en plateformes performantes et scalables. Mon expertise combine le développement de solutions web/mobiles de bout en bout et le déploiement de stratégies d'acquisition, de content marketing et de community building orientées résultats.
+        </p>
+
+        <!-- Barres de Compétences Dynamiques -->
+        <div class="skills-container">
+          <div class="skill">
+            <div class="skill-info">
+              <span class="skill-name" data-i18n="skills_frontend">Frontend (React, Next.js, TypeScript, Tailwind)</span>
+              <span class="skill-percent">92%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="92%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-info">
+              <span class="skill-name" data-i18n="skills_backend">Backend & APIs (Node.js, Express, Python, PostgreSQL)</span>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="88%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-info">
+              <span class="skill-name" data-i18n="skills_cm">Community Management & Social Media Strategy</span>
+              <span class="skill-percent">94%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="94%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-info">
+              <span class="skill-name" data-i18n="skills_marketing">Marketing Digital, SEO, SEA & Acquisition</span>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="90%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-info">
+              <span class="skill-name" data-i18n="skills_uiux">UI/UX Design, Branding & Copywriting</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="85%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-buttons">
+          <a href="#contact" class="highlight-btn btn-primary" data-i18n="about_hire_btn">Me Recruter</a>
+          <a href="mailto:enzowarren237@gmail.com?subject=Demande%20de%20CV%20-%20Enzo%20Warren" class="highlight-btn btn-secondary" data-i18n="about_cv_btn">Demander mon CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 : PROJETS SÉLECTIONNÉS (PROJECTS) -->
+  <section id="projects" class="projects-section">
+    <div class="section-header-block">
+      <div class="background-watermark" data-i18n="works_watermark">PROJETS CHOISIS_</div>
+      <h2 class="section-tag-heading">
+        <span class="slash">/</span> <span data-i18n="works_heading">RÉALISATIONS PHARES</span>
+      </h2>
+      <p class="section-subtext" data-i18n="works_subtext">
+        Une sélection de mes travaux alliant ingénierie technique, automatisation et performance marketing.
+      </p>
+    </div>
+
+    <!-- Filtres Dynamiques de Projets -->
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Tous</button>
+      <button class="filter-btn" data-filter="dev" data-i18n="filter_dev">Développement</button>
+      <button class="filter-btn" data-filter="marketing" data-i18n="filter_marketing">Marketing & Growth</button>
+      <button class="filter-btn" data-filter="cm" data-i18n="filter_cm">Community Management</button>
+    </div>
+
+    <!-- Grille de Cartes de Projets (Générée par script.js) -->
+    <div class="projects-grid" id="projectsGrid"></div>
+  </section>
+
+  <!-- SECTION 4 : TRANSITION ZOOM SVG -->
+  <div class="certifications-intro">
+    <svg viewBox="0 0 1000 200" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" class="zoom-svg">
+      <g dominant-baseline="middle" class="svg-text">
+        <text x="470" y="100" text-anchor="end">CERTIF</text>
+        <text x="500" y="100" text-anchor="middle" class="orange-letter">I</text>
+        <text x="530" y="100" text-anchor="start">CATIONS</text>
+      </g>
+    </svg>
+  </div>
+
+  <!-- SECTION 5 : CERTIFICATIONS & VALIDATIONS -->
+  <section id="certs-list" class="certs-wrapper">
+    <div class="certs-container">
+      <header class="certs-header">
+        <h2 class="section-tag-heading">
+          <span class="slash" data-i18n="certs_slash">/</span> <span data-i18n="certs_heading">CERTIFICATIONS_VALIDÉES</span>
+        </h2>
+        <p class="section-subtext" data-i18n="certs_subtext">
+          Compétences attestées et accréditations techniques.
+        </p>
+      </header>
+
+      <!-- Grille de Certifications (Générée par script.js) -->
+      <div class="certs-grid" id="certsGrid"></div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 : CONTACT -->
+  <section id="contact" class="contact-wrapper">
+    <div class="digital-grid"></div>
+    <div class="contact-content">
+      
+      <!-- Coordonnées d'Enzo Warren -->
+      <div class="contact-info animate-left">
+        <h2 class="contact-title" data-i18n="contact_title">
+          CONSTRUISONS<br><span class="accent-text">QUELQUE CHOSE D'UNIQUE.</span>
+        </h2>
+        <p class="contact-desc" data-i18n="contact_desc">
+          Actuellement ouvert aux opportunités en Développement Full-Stack, Community Management et Marketing Digital. Discutons de votre prochain projet !
+        </p>
+
+        <div class="info-grid">
+          <div class="info-block">
+            <span class="info-label">// IDENTITÉ_</span>
+            <span class="info-value" data-i18n="contact_identity">KAMGANG TALLA ENZO WARREN</span>
+          </div>
+
+          <div class="info-block">
+            <span class="info-label">// RÔLES_</span>
+            <span class="info-value" data-i18n="contact_role">Full-Stack Dev & Digital Strategist</span>
+          </div>
+
+          <div class="info-block">
+            <span class="info-label">// CONTACTS TÉLÉPHONIQUES & WHATSAPP_</span>
+            <span class="info-value">+237 687 93 54 01 / +237 682 53 89 59</span>
+            <div class="phone-action-links">
+              <a href="https://wa.me/237687935401?text=Bonjour%20Enzo%20Warren,%20je%20vous%20contacte%20depuis%20votre%20portfolio" target="_blank" class="phone-link-btn whatsapp-btn">
+                <span>💬 WhatsApp (+237 687935401)</span>
+              </a>
+              <a href="tel:+237682538959" class="phone-link-btn">
+                <span>📞 Appel (+237 682538959)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <span class="info-label">// ADRESSE EMAIL_</span>
+            <span class="info-value">
+              <a href="mailto:enzowarren237@gmail.com" class="mail-link">enzowarren237@gmail.com</a>
+            </span>
+          </div>
+
+          <div class="info-block">
+            <span class="info-label">// RÉSEAUX SOCIAUX_</span>
+            <div class="social-links">
+              <a href="https://wa.me/237687935401" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a href="mailto:enzowarren237@gmail.com" target="_blank" rel="noopener noreferrer">Email Direct</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulaire Cyberpunk Haute Précision -->
+      <div class="contact-form-container animate-right">
+        <form id="contactForm" class="glass-form" novalidate>
+          <div class="form-header">
+            <h3 data-i18n="form_heading">/ INITIALISER_CONNEXION</h3>
+            <div class="barcode"></div>
+          </div>
+
+          <div class="input-group">
+            <input type="text" id="userName" required placeholder=" " autocomplete="off">
+            <label for="userName" data-i18n="form_name_label">Nom Complet</label>
+            <div class="input-border"></div>
+          </div>
+
+          <div class="input-group">
+            <input type="email" id="userEmail" required placeholder=" " autocomplete="off">
+            <label for="userEmail" data-i18n="form_email_label">Adresse Email</label>
+            <div class="input-border"></div>
+          </div>
+
+          <div class="input-group">
+            <textarea id="userMsg" required placeholder=" " rows="4"></textarea>
+            <label for="userMsg" data-i18n="form_message_label">Votre Message</label>
+            <div class="input-border"></div>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span data-i18n="form_submit">ENVOYER LE MESSAGE</span>
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Vue de succès après soumission -->
+        <div id="contactSuccess" class="success-view glass-card">
+          <div class="success-icon">
+            <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="3" fill="none">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="success-title" data-i18n="success_title">MESSAGE TRANSMIS !</h3>
+          <p class="success-desc" data-i18n="success_desc">
+            Merci ! Enzo Warren a bien reçu votre transmission. Je reviens vers vous dans les plus brefs délais.
+          </p>
+          <button id="resetFormBtn" class="reset-btn" data-i18n="success_reset">Envoyer un autre message</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-copy">
+      © <span id="currentYear">2026</span> <strong>KAMGANG TALLA ENZO WARREN</strong>. <span data-i18n="footer_rights">Tous droits réservés.</span>
+    </div>
+    <div class="footer-status">
+      <span>LATENCY: <strong>0ms</strong></span> | 
+      <span>ENGINE: <strong>VANILLA CORE</strong></span>
+    </div>
+  </footer>
+
+  <!-- MODALE PROJET -->
+  <div id="projectModalOverlay" class="modal-overlay">
+    <div id="projectModalContent" class="project-modal-panel"></div>
+  </div>
+
+  <!-- DRAWER CERTIFICATION -->
+  <div id="drawerOverlay" class="modal-overlay"></div>
+  <aside id="certDrawer" class="drawer-panel"></aside>
+
+  <!-- Script Principal -->
+  <script src="script.js"></script>
+</body>
+</html>

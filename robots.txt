@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kamgang-enzo.vercel.app/sitemap.xml
