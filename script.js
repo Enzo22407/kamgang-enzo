@@ -886,6 +886,79 @@ function initMobileMenu() {
   });
 }
 
+// --- SYSTÈME DE NAVIGATION ACTIVE (SCROLLSPY & CLIC) ---
+function initNavigationSpy() {
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const sectionIds = ['hero', 'about', 'projects', 'certs-list', 'contact'];
+  const sections = sectionIds
+    .map(id => ({ id, el: document.getElementById(id) }))
+    .filter(item => item.el !== null);
+
+  let isNavClicking = false;
+  let navClickTimer = null;
+
+  function setActiveNavLink(targetId) {
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === `#${targetId}`) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  function updateActiveOnScroll() {
+    if (isNavClicking) return;
+
+    const scrollY = window.scrollY;
+    const windowH = window.innerHeight;
+    const docH = document.documentElement.scrollHeight;
+
+    // Si on est en haut de la page
+    if (scrollY < 120) {
+      setActiveNavLink('hero');
+      return;
+    }
+
+    // Si on est tout en bas de page (contact)
+    if (scrollY + windowH >= docH - 60) {
+      setActiveNavLink('contact');
+      return;
+    }
+
+    // Recherche de la section active
+    let currentId = 'hero';
+    for (const item of sections) {
+      // Décalage pour prendre en compte la navbar fixe (80px)
+      if (scrollY >= item.el.offsetTop - 140) {
+        currentId = item.id;
+      }
+    }
+
+    setActiveNavLink(currentId);
+  }
+
+  // Écouteur de clic sur tous les liens internes de la page
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', () => {
+      const targetId = anchor.getAttribute('href')?.replace('#', '');
+      if (targetId && sectionIds.includes(targetId)) {
+        setActiveNavLink(targetId);
+        isNavClicking = true;
+        clearTimeout(navClickTimer);
+        navClickTimer = setTimeout(() => {
+          isNavClicking = false;
+        }, 850);
+      }
+    });
+  });
+
+  window.addEventListener('scroll', updateActiveOnScroll, { passive: true });
+  window.addEventListener('resize', updateActiveOnScroll, { passive: true });
+  updateActiveOnScroll();
+}
+
 // --- INITIALISATION GLOBALE AU CHARGEMENT ---
 document.addEventListener('DOMContentLoaded', () => {
   // Appliquer le thème et la langue mémorisés
@@ -934,5 +1007,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initScrollInteractions();
   initMobileMenu();
+  initNavigationSpy();
 });
 
