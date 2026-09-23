@@ -23,7 +23,16 @@ const translations = {
     about_title: "Découvrez mon Parcours & ma Double Expertise !",
     about_desc: "Passionné par l'alliance entre ingénierie logicielle et croissance digitale, je transforme les idées audacieuses en plateformes performantes et scalables. Mon expertise combine le développement de solutions web/mobiles de bout en bout et le déploiement de stratégies d'acquisition, de content marketing et de community building orientées résultats.",
     about_hire_btn: "Me Recruter",
-    about_cv_btn: "Télécharger CV",
+    about_cv_btn: "Télécharger mon CV",
+    hero_cv_btn: "Télécharger CV",
+    cv_modal_title: "TÉLÉCHARGER MON CV",
+    cv_modal_desc: "Choisissez la déclinaison correspondant au profil recherché pour vos projets :",
+    cv_dev_title: "CV Développeur Full-Stack",
+    cv_dev_desc: "Spécialisation Ingénierie Logicielle : React, Next.js, Node.js, TypeScript, PostgreSQL, architectures web & mobiles scalables.",
+    cv_marketing_title: "CV Digital Marketing & CM",
+    cv_marketing_desc: "Spécialisation Croissance & Animation : Campagnes Meta & Google Ads, stratégie éditoriale, community management et acquisition.",
+    cv_action_view: "Aperçu",
+    cv_action_download: "Télécharger",
     skills_frontend: "Frontend (React, Next.js, TypeScript, Tailwind)",
     skills_backend: "Backend & APIs (Node.js, Express, Python, PostgreSQL)",
     skills_cm: "Community Management & Social Media Strategy",
@@ -74,7 +83,16 @@ const translations = {
     about_title: "Explore My Journey & Dual Skillset!",
     about_desc: "Driven by the synergy between software engineering and digital growth, I turn ambitious ideas into fast, reliable platforms. My experience bridges modern full-stack development with acquisition campaigns, SEO/SEA, content strategy, and community leadership.",
     about_hire_btn: "Hire Me",
-    about_cv_btn: "Download CV",
+    about_cv_btn: "Download my CV",
+    hero_cv_btn: "Download CV",
+    cv_modal_title: "DOWNLOAD MY RESUME",
+    cv_modal_desc: "Choose the resume version matching the profile you need for your projects:",
+    cv_dev_title: "Full-Stack Developer Resume",
+    cv_dev_desc: "Software Engineering Track: React, Next.js, Node.js, TypeScript, PostgreSQL, scalable web & mobile architectures.",
+    cv_marketing_title: "Digital Marketing & CM Resume",
+    cv_marketing_desc: "Growth & Community Track: Meta & Google Ads campaigns, editorial strategy, community management, and user acquisition.",
+    cv_action_view: "Preview",
+    cv_action_download: "Download",
     skills_frontend: "Frontend (React, Next.js, TypeScript, Tailwind)",
     skills_backend: "Backend & APIs (Node.js, Express, Python, PostgreSQL)",
     skills_cm: "Community Management & Social Media Strategy",
@@ -998,6 +1016,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') {
       closeProjectModal();
       closeCertDrawer();
+      closeCvModal();
     }
   });
 
@@ -1008,5 +1027,34 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollInteractions();
   initMobileMenu();
   initNavigationSpy();
+  initCvModal();
 });
+
+// --- GESTION DE LA MODALE CV ---
+function openCvModal() {
+  const modal = document.getElementById('cvModalOverlay');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeCvModal() {
+  const modal = document.getElementById('cvModalOverlay');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+function initCvModal() {
+  document.getElementById('heroCvBtn')?.addEventListener('click', openCvModal);
+  document.getElementById('aboutCvBtn')?.addEventListener('click', openCvModal);
+  document.getElementById('cvModalCloseBtn')?.addEventListener('click', closeCvModal);
+  document.getElementById('cvModalOverlay')?.addEventListener('click', (e) => {
+    if (e.target.id === 'cvModalOverlay') {
+      closeCvModal();
+    }
+  });
+}
 

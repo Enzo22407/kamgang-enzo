@@ -155,6 +155,14 @@
       <div class="hero-buttons animate-item delay-5">
         <a href="#contact" class="highlight-btn btn-primary" data-i18n="hero_contact_btn">Me Contacter</a>
         <a href="#projects" class="highlight-btn btn-secondary" data-i18n="hero_explore_btn">Explorer mes Projets</a>
+        <button type="button" class="highlight-btn btn-cv-hero" id="heroCvBtn">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span data-i18n="hero_cv_btn">Télécharger CV</span>
+        </button>
       </div>
     </div>
 
@@ -251,7 +259,14 @@
 
         <div class="about-buttons">
           <a href="#contact" class="highlight-btn btn-primary" data-i18n="about_hire_btn">Me Recruter</a>
-          <a href="mailto:enzowarren237@gmail.com?subject=Demande%20de%20CV%20-%20Enzo%20Warren" class="highlight-btn btn-secondary" data-i18n="about_cv_btn">Demander mon CV</a>
+          <button type="button" class="highlight-btn btn-secondary" id="aboutCvBtn">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span data-i18n="about_cv_btn">Télécharger mon CV</span>
+          </button>
         </div>
       </div>
     </div>
@@ -437,6 +452,104 @@
   <!-- DRAWER CERTIFICATION -->
   <div id="drawerOverlay" class="modal-overlay"></div>
   <aside id="certDrawer" class="drawer-panel"></aside>
+
+  <!-- MODALE SÉLECTION CV -->
+  <div id="cvModalOverlay" class="modal-overlay">
+    <div class="cv-modal-panel glass-card">
+      <button class="modal-close-btn" id="cvModalCloseBtn" aria-label="Fermer la modale">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-meta">
+          <span class="project-tag">// CURRICULUM VITAE</span>
+          <span class="project-date">FORMAT PDF</span>
+        </div>
+        <h3 class="modal-title" data-i18n="cv_modal_title">TÉLÉCHARGER MON CV</h3>
+        <p class="modal-desc" data-i18n="cv_modal_desc">
+          Choisissez la déclinaison correspondant au profil recherché pour vos projets :
+        </p>
+      </div>
+
+      <div class="cv-cards-grid">
+        <!-- Option 1 : Développeur Full-Stack -->
+        <div class="cv-card">
+          <div class="cv-card-header">
+            <span class="cv-badge tech">TECH / FULL-STACK</span>
+            <div class="cv-format-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" stroke="currentColor" stroke-width="1.8" fill="none">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <h4 class="cv-card-title" data-i18n="cv_dev_title">CV Développeur Full-Stack</h4>
+          <p class="cv-card-desc" data-i18n="cv_dev_desc">
+            Spécialisation Ingénierie Logicielle : React, Next.js, Node.js, TypeScript, PostgreSQL, architectures web & mobiles scalables.
+          </p>
+          <div class="cv-card-actions">
+            <a href="assets/docs/cv-enzo.pdf" target="_blank" rel="noopener noreferrer" class="cv-action-btn btn-view" data-i18n="cv_action_view">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span>Aperçu</span>
+            </a>
+            <a href="assets/docs/cv-enzo.pdf" download="CV-KAMGANG-ENZO-FullStack.pdf" class="cv-action-btn btn-download" data-i18n="cv_action_download">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Télécharger</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Option 2 : Community Manager & Marketing Digital -->
+        <div class="cv-card">
+          <div class="cv-card-header">
+            <span class="cv-badge growth">GROWTH / MARKETING</span>
+            <div class="cv-format-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" stroke="currentColor" stroke-width="1.8" fill="none">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <polyline points="9 15 12 12 15 15"></polyline>
+                <line x1="12" y1="12" x2="12" y2="20"></line>
+              </svg>
+            </div>
+          </div>
+          <h4 class="cv-card-title" data-i18n="cv_marketing_title">CV Digital Marketing & CM</h4>
+          <p class="cv-card-desc" data-i18n="cv_marketing_desc">
+            Spécialisation Croissance & Animation : Campagnes Meta & Google Ads, stratégie éditoriale, community management et acquisition.
+          </p>
+          <div class="cv-card-actions">
+            <a href="assets/docs/cv-enzo-2.pdf" target="_blank" rel="noopener noreferrer" class="cv-action-btn btn-view" data-i18n="cv_action_view">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span>Aperçu</span>
+            </a>
+            <a href="assets/docs/cv-enzo-2.pdf" download="CV-KAMGANG-ENZO-Marketing-CM.pdf" class="cv-action-btn btn-download" data-i18n="cv_action_download">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Télécharger</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Script Principal -->
   <script src="script.js"></script>
