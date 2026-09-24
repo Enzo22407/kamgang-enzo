@@ -1,6 +1,6 @@
 /**
  * Portfolio Engine - KAMGANG TALLA ENZO WARREN
- * Full-Stack Developer | Community Manager | Digital Marketer
+ * Web Developer | Community Manager | Digital Marketer
  */
 
 // --- DICTIONNAIRE MULTILINGUE (FR / EN) ---
@@ -13,7 +13,7 @@ const translations = {
     nav_contact: "Contact",
     nav_hire_me: "Me Recruter",
     hero_badge: "Bonjour, je suis",
-    hero_subtitle: "Développeur Full-Stack & Stratège Marketing Digital / Community Manager",
+    hero_subtitle: "Développeur Web & Stratège Marketing Digital / Community Manager",
     hero_bio: "J'architecture des applications web & mobiles robustes et je conçois des stratégies digitales à fort impact. Expert en écosystèmes modernes (React, Next.js, Node.js), growth marketing et animation de communautés engagées.",
     hero_contact_btn: "Me Contacter",
     hero_explore_btn: "Explorer mes Projets",
@@ -27,8 +27,8 @@ const translations = {
     hero_cv_btn: "Télécharger CV",
     cv_modal_title: "TÉLÉCHARGER MON CV",
     cv_modal_desc: "Choisissez la déclinaison correspondant au profil recherché pour vos projets :",
-    cv_dev_title: "CV Développeur Full-Stack",
-    cv_dev_desc: "Spécialisation Ingénierie Logicielle : React, Next.js, Node.js, TypeScript, PostgreSQL, architectures web & mobiles scalables.",
+    cv_dev_title: "CV Développeur Web",
+    cv_dev_desc: "Spécialisation Développement Web : JavaScript, PHP, Python, architectures web performantes, plateformes sur-mesure et intégration d'APIs.",
     cv_marketing_title: "CV Digital Marketing & CM",
     cv_marketing_desc: "Spécialisation Croissance & Animation : Campagnes Meta & Google Ads, stratégie éditoriale, community management et acquisition.",
     cv_action_view: "Aperçu",
@@ -51,9 +51,9 @@ const translations = {
     certs_subtext: "Compétences attestées et accréditations techniques.",
     inspect_data: "INSPECTER_DONNÉES →",
     contact_title: "CONSTRUISONS<br><span class=\"accent-text\">QUELQUE CHOSE D'UNIQUE.</span>",
-    contact_desc: "Actuellement ouvert aux opportunités en Développement Full-Stack, Community Management et Marketing Digital. Discutons de votre prochain projet !",
+    contact_desc: "Actuellement ouvert aux opportunités en Développement Web, Community Management et Marketing Digital. Discutons de votre prochain projet !",
     contact_identity: "KAMGANG TALLA ENZO WARREN",
-    contact_role: "Full-Stack Dev & Digital Strategist",
+    contact_role: "Développeur Web & Stratège Digital",
     form_heading: "/ INITIALISER_CONNEXION",
     form_name_label: "Nom Complet",
     form_email_label: "Adresse Email",
@@ -73,7 +73,7 @@ const translations = {
     nav_contact: "Contact",
     nav_hire_me: "Hire Me",
     hero_badge: "Hello, I am",
-    hero_subtitle: "Full-Stack Developer & Digital Marketing / Community Manager",
+    hero_subtitle: "Web Developer & Digital Marketing / Community Manager",
     hero_bio: "I architect scalable web & mobile apps and drive high-impact digital strategies. Specialized in modern frameworks (React, Next.js, Node.js), growth marketing, and building high-converting engaged communities.",
     hero_contact_btn: "Contact Me",
     hero_explore_btn: "Explore My Work",
@@ -81,14 +81,14 @@ const translations = {
     exp_badge_years: "03+",
     exp_badge_text: "Years Experience\nTech & Marketing",
     about_title: "Explore My Journey & Dual Skillset!",
-    about_desc: "Driven by the synergy between software engineering and digital growth, I turn ambitious ideas into fast, reliable platforms. My experience bridges modern full-stack development with acquisition campaigns, SEO/SEA, content strategy, and community leadership.",
+    about_desc: "Driven by the synergy between software engineering and digital growth, I turn ambitious ideas into fast, reliable platforms. My experience bridges modern web development with acquisition campaigns, SEO/SEA, content strategy, and community leadership.",
     about_hire_btn: "Hire Me",
     about_cv_btn: "Download my CV",
     hero_cv_btn: "Download CV",
     cv_modal_title: "DOWNLOAD MY RESUME",
     cv_modal_desc: "Choose the resume version matching the profile you need for your projects:",
-    cv_dev_title: "Full-Stack Developer Resume",
-    cv_dev_desc: "Software Engineering Track: React, Next.js, Node.js, TypeScript, PostgreSQL, scalable web & mobile architectures.",
+    cv_dev_title: "Web Developer Resume",
+    cv_dev_desc: "Web Development Track: JavaScript, PHP, Python, performant web platforms, custom web tools, and REST APIs.",
     cv_marketing_title: "Digital Marketing & CM Resume",
     cv_marketing_desc: "Growth & Community Track: Meta & Google Ads campaigns, editorial strategy, community management, and user acquisition.",
     cv_action_view: "Preview",
@@ -111,9 +111,9 @@ const translations = {
     certs_subtext: "Technical accreditations, verified achievements, and certifications.",
     inspect_data: "INSPECT_DATA →",
     contact_title: "LET'S BUILD<br><span class=\"accent-text\">SOMETHING GREAT.</span>",
-    contact_desc: "Currently open to opportunities in Full-Stack Web Development, Community Management, and Digital Marketing. Let's discuss your vision!",
+    contact_desc: "Currently open to opportunities in Web Development, Community Management, and Digital Marketing. Let's discuss your vision!",
     contact_identity: "KAMGANG TALLA ENZO WARREN",
-    contact_role: "Full-Stack Dev & Digital Strategist",
+    contact_role: "Web Developer & Digital Strategist",
     form_heading: "/ INITIATE_CONNECTION",
     form_name_label: "Full Name",
     form_email_label: "Email Address",
@@ -135,127 +135,85 @@ const projectsData = [
   {
     id: "p1",
     index: "01.",
-    role: "FULL-STACK & GROWTH",
-    category: "dev marketing",
-    title: { fr: "E-COMMERCE & GROWTH FUNNEL", en: "E-COMMERCE & GROWTH FUNNEL" },
+    role: "DÉVELOPPEMENT WEB",
+    category: "dev",
+    title: { fr: "RÉSIDENCE MOLIÈRE - SITE WEB OFFICIEL", en: "RÉSIDENCE MOLIÈRE - OFFICIAL WEBSITE" },
     shortDesc: {
-      fr: "Plateforme de vente en ligne complète couplée à un tunnel d'acquisition automatisé, tracking Facebook Pixel, Google Analytics 4 et optimisation du taux de conversion.",
-      en: "Complete e-commerce platform coupled with an automated acquisition funnel, Facebook Pixel tracking, GA4, and conversion rate optimization."
+      fr: "Conception et développement du site web vitrine haut standing de la Résidence Molière : présentation des appartements meublés, commodités et module de réservation directe.",
+      en: "Design and development of the premium showcase website for Résidence Molière: luxury furnished apartments, amenities, and direct reservation inquiries."
     },
     fullDesc: {
-      fr: "Conception architecturale d'une boutique en ligne haute vitesse avec Next.js et API Node.js. Intégration de passerelles de paiement (Mobile Money, Carte), gestion des stocks en temps réel et implémentation d'une stratégie de remarketing et d'inbound marketing qui a boosté le ROI des campagnes de 280%.",
-      en: "Architectural design of a high-speed online storefront with Next.js and Node.js API. Payment gateway integration (Mobile Money, Cards), live inventory sync, and implementation of a remarketing strategy driving a 280% ROI boost on ad campaigns."
+      fr: "Création complète de la plateforme web de la Résidence Molière. Interface responsive immersive, galeries photos optimisées, intégration de demandes de réservation directes (WhatsApp & formulaires) et référencement SEO local pour maximiser les séjours.",
+      en: "Complete creation of the Résidence Molière web platform. Immersive responsive UI, optimized photo galleries, direct booking inquiry integration (WhatsApp & forms), and local SEO to maximize bookings."
     },
-    tech: ["Next.js", "React", "Node.js", "PostgreSQL", "Meta Ads", "GA4"],
+    tech: ["HTML5 / CSS3", "JavaScript", "PHP", "Responsive Design", "SEO Local"],
     metrics: [
-      { label: { fr: "CROISSANCE ROI", en: "ROI GROWTH" }, value: "+280%" },
-      { label: { fr: "VITESSE CHARGEMENT", en: "LOAD SPEED" }, value: "0.8s" },
-      { label: { fr: "TAUX CONVERSION", en: "CONVERSION" }, value: "4.6%" }
+      { label: { fr: "RÉSERVATIONS", en: "BOOKINGS" }, value: "+120%" },
+      { label: { fr: "CHARGEMENT", en: "LOAD SPEED" }, value: "0.8s" },
+      { label: { fr: "PERFORMANCE", en: "PERFORMANCE" }, value: "98/100" }
     ]
   },
   {
     id: "p2",
     index: "02.",
-    role: "COMMUNITY & AUTOMATION",
-    category: "cm dev",
-    title: { fr: "SOCIAL ENGAGEMENT & AI BOT", en: "SOCIAL ENGAGEMENT & AI BOT" },
+    role: "DÉVELOPPEMENT WEB CORPORATE",
+    category: "dev",
+    title: { fr: "F2NLOGISTICS - PLATEFORME DIGITALE", en: "F2NLOGISTICS - CORPORATE WEB PORTAL" },
     shortDesc: {
-      fr: "Moteur d'automatisation des publications et de modération intelligente pour communautés Telegram, WhatsApp et réseaux sociaux via des scripts automatisés.",
-      en: "Autonomous post scheduling and smart moderation engine for Telegram, WhatsApp groups, and social platforms via automated scripts."
+      fr: "Plateforme web d'entreprise pour F2NLogistics : présentation des solutions de fret international, transit, dédouanement et formulaire intelligent de cotation en ligne.",
+      en: "Corporate web portal for F2NLogistics: international freight forwarding, customs clearance, transit services, and online quotation system."
     },
     fullDesc: {
-      fr: "Développement d'un bot d'animation et de filtrage pour gérer des communautés de plus de 15 000 membres actifs. Programmation éditoriale, gamification des interactions, réponses instantanées par IA et métriques d'engagement en temps réel.",
-      en: "Engineered an interactive moderation and animation bot overseeing communities of 15,000+ active members. Automated editorial scheduling, interaction gamification, AI-assisted responses, and live engagement analytics."
+      fr: "Développement du portail corporate de F2NLogistics. Présentation dynamique des pôles logistiques (fret maritime, aérien et terrestre), formulaire intelligent de demande de cotation fret et optimisation mobile-first pour les partenaires internationaux.",
+      en: "Development of the corporate portal for F2NLogistics. Dynamic presentation of multimodal logistics services (sea, air, road freight), smart quote request forms, and mobile-first optimization for international partners."
     },
-    tech: ["Python", "Node.js", "Telegram API", "WhatsApp Cloud", "n8n"],
+    tech: ["JavaScript", "PHP", "CSS3 Modern", "Formulaires Dynamiques", "SEO"],
     metrics: [
-      { label: { fr: "MEMBRES ACTIFS", en: "ACTIVE MEMBERS" }, value: "15k+" },
-      { label: { fr: "ENGAGEMENT", en: "ENGAGEMENT" }, value: "+65%" },
-      { label: { fr: "RÉPONSE MOY.", en: "AVG RESPONSE" }, value: "< 2s" }
+      { label: { fr: "DEMANDES DEVIS", en: "QUOTE REQUESTS" }, value: "+85%" },
+      { label: { fr: "TRAFIC MENSUEL", en: "MONTHLY VISITS" }, value: "5k+" },
+      { label: { fr: "EXPÉRIENCE MOBILE", en: "MOBILE UX" }, value: "100%" }
     ]
   },
   {
     id: "p3",
     index: "03.",
-    role: "MARKETING DIGITAL & ADS",
-    category: "marketing",
-    title: { fr: "DIGITAL ADS ACQUISITION SUITE", en: "DIGITAL ADS ACQUISITION SUITE" },
+    role: "APPLICATION WEB & GESTION (SAAS)",
+    category: "dev",
+    title: { fr: "F2NLOGISTICS - LOGICIEL DE FACTURATION", en: "F2NLOGISTICS - INVOICING SOFTWARE" },
     shortDesc: {
-      fr: "Campagnes d'acquisition multicanales (Meta Ads, Google Search/Display, TikTok Ads) avec landing pages ultra-optimisées et stratégie de copywriting persuasif.",
-      en: "Multichannel customer acquisition campaigns (Meta Ads, Google Ads, TikTok) with ultra-optimized landing pages and persuasive copywriting."
+      fr: "Solution logicielle web sur-mesure de gestion commerciale et facturation pour F2NLogistics : devis, factures, bordereaux de livraison, suivi des règlements et exports.",
+      en: "Custom web invoicing and commercial management software for F2NLogistics: quotes, invoices, delivery tracking, payment workflows, and financial exports."
     },
     fullDesc: {
-      fr: "Pilotage complet de campagnes publicitaires à fort impact pour des marques et PME. Création des visuels engageants, tests A/B des hooks vidéos, segmentation d'audiences ciblées et réduction du coût par acquisition (CPA) de 42%.",
-      en: "End-to-end management of high-impact advertising campaigns for brands and SMBs. Engaging visual creation, hook A/B testing, precise audience segmentation, and a 42% reduction in Cost Per Acquisition (CPA)."
+      fr: "Conception et déploiement d'un logiciel web de facturation métier adapté aux opérations transit de F2NLogistics. Génération automatisée de documents PDF officiels, gestion multi-devises, suivi des créances clients et tableau de bord analytique en temps réel.",
+      en: "Design and deployment of a dedicated web invoicing and management software tailored to F2NLogistics transit operations. Automated official PDF generation, multi-currency processing, receivables tracking, and real-time analytics dashboard."
     },
-    tech: ["Meta Ads Manager", "Google Ads", "Canva Pro", "A/B Testing", "SEO"],
+    tech: ["PHP", "JavaScript", "MySQL", "Génération PDF", "Dashboard Analytics"],
     metrics: [
-      { label: { fr: "PORTEE CUMULEE", en: "TOTAL REACH" }, value: "500k+" },
-      { label: { fr: "BAISSE DU CPA", en: "CPA REDUCTION" }, value: "-42%" },
-      { label: { fr: "ROAS MOYEN", en: "AVG ROAS" }, value: "4.8x" }
+      { label: { fr: "GAIN DE TEMPS", en: "TIME SAVED" }, value: "-60%" },
+      { label: { fr: "FACTURES GÉRÉES", en: "INVOICES" }, value: "1,500+" },
+      { label: { fr: "PRÉCISION", en: "ACCURACY" }, value: "100%" }
     ]
   },
   {
     id: "p4",
     index: "04.",
-    role: "FULL-STACK SAAS",
-    category: "dev",
-    title: { fr: "WARREN CAMPUS & ERP SYSTEM", en: "WARREN CAMPUS & ERP SYSTEM" },
-    shortDesc: {
-      fr: "Système de gestion académique et administrative avec portail étudiant, gestion des cours, suivi des notes et tableau de bord décisionnel.",
-      en: "Academic and enterprise resource planner featuring student portals, faculty tracking, grade management, and leadership dashboards."
-    },
-    fullDesc: {
-      fr: "Application web d'envergure conçue avec React, TypeScript et PostgreSQL. Gestion des rôles RBAC (Administrateurs, Professeurs, Étudiants), génération automatique de relevés de notes en PDF et notifications SMS/Email.",
-      en: "Enterprise-grade web application built with React, TypeScript, and PostgreSQL. RBAC permission handling, automated PDF report card generation, and SMS/Email notification alerts."
-    },
-    tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
-    metrics: [
-      { label: { fr: "UTILISATEURS", en: "TOTAL USERS" }, value: "3,200+" },
-      { label: { fr: "DISPONIBILITÉ", en: "UPTIME" }, value: "99.9%" },
-      { label: { fr: "REQUÊTES / SEC", en: "TPS" }, value: "1,200" }
-    ]
-  },
-  {
-    id: "p5",
-    index: "05.",
-    role: "COMMUNITY & BRANDING",
+    role: "COMMUNITY MANAGEMENT & GROWTH",
     category: "cm marketing",
-    title: { fr: "VIRAL BRANDING & CONTENT ACCELERATOR", en: "VIRAL BRANDING & CONTENT ACCELERATOR" },
+    title: { fr: "RÉSIDENCE MOLIÈRE - GESTION DES RÉSEAUX", en: "RÉSIDENCE MOLIÈRE - SOCIAL MEDIA MANAGEMENT" },
     shortDesc: {
-      fr: "Stratégie de personal branding, calendrier éditorial percutant et création de vidéos shorts / reels ayant généré plus d'un million de vues cumulées.",
-      en: "Personal branding roadmap, high-retention content calendar, and viral shorts/reels production generating over 1M cumulative organic views."
+      fr: "Stratégie éditoriale, création de contenus visuels et animation des réseaux sociaux (Facebook, Instagram) pour booster la notoriété et le taux d'occupation de la Résidence Molière.",
+      en: "Editorial strategy, visual content creation, and active community management across Facebook and Instagram to boost brand awareness and occupancy for Résidence Molière."
     },
     fullDesc: {
-      fr: "Élaboration d'une identité de marque puissante et cohérente sur LinkedIn, Instagram et TikTok. Scripts vidéos conçus selon la méthode AIDA, animation de live interactifs et conversion des followers en leads qualifiés.",
-      en: "Created a strong and consistent brand identity across LinkedIn, Instagram, and TikTok. High-retention video scripting based on AIDA framework, live Q&A hosting, and converting social followers into qualified sales leads."
+      fr: "Gestion globale des réseaux sociaux pour la Résidence Molière. Création de contenus photo/vidéo valorisant le standing des appartements, campagnes publicitaires Meta Ads ciblées pour les voyageurs et expatriés, et engagement communautaire réactif convertissant les interactions en réservations fermes.",
+      en: "Comprehensive social media management for Résidence Molière. High-end photo and video content showcasing suites, targeted Meta Ads campaigns for travelers and expats, and prompt audience engagement converting inquiries into confirmed reservations."
     },
-    tech: ["Content Strategy", "CapCut", "Photoshop", "Copywriting", "Analytics"],
+    tech: ["Meta Ads Manager", "Instagram & Facebook", "Stratégie de Contenu", "Canva / Montage", "Growth"],
     metrics: [
-      { label: { fr: "VUES ORGANIQUES", en: "ORGANIC VIEWS" }, value: "1.2M+" },
-      { label: { fr: "NOUVEAUX SUIVANTS", en: "NEW FOLLOWERS" }, value: "+28k" },
-      { label: { fr: "LEADS GÉNÉRÉS", en: "LEADS WON" }, value: "450+" }
-    ]
-  },
-  {
-    id: "p6",
-    index: "06.",
-    role: "FULL-STACK INTERACTIVE",
-    category: "dev",
-    title: { fr: "CYBERPUNK PORTFOLIO CORE", en: "CYBERPUNK PORTFOLIO CORE" },
-    shortDesc: {
-      fr: "Moteur interactif temps-réel à 60 FPS avec canvas de particules aurore, bascule bilingue instantanée et système d'inspection de données modulaires.",
-      en: "Real-time 60 FPS interactive portfolio engine with aurora meteor canvas, instantaneous bilingual support, and modular inspection drawers."
-    },
-    fullDesc: {
-      fr: "Développement d'un portfolio haute fidélité sans frameworks lourds pour des performances maximales. Effets de tilt 3D basés sur la physique de la souris, gestion fluide du Dark/Light mode et responsive design sans faille.",
-      en: "Engineered a high-fidelity portfolio without heavy frameworks for peak performance. Mouse physics-based 3D tilt effects, seamless dark/light mode switching, and flawless responsive layouts."
-    },
-    tech: ["HTML5", "Vanilla CSS", "JavaScript ES6+", "HTML5 Canvas", "SVG"],
-    metrics: [
-      { label: { fr: "SCORE LIGHTHOUSE", en: "LIGHTHOUSE" }, value: "100" },
-      { label: { fr: "TEMPS DE RÉPONSE", en: "LATENCY" }, value: "0ms" },
-      { label: { fr: "FRAME RATE", en: "FRAME RATE" }, value: "60 FPS" }
+      { label: { fr: "TAUX OCCUPATION", en: "OCCUPANCY RATE" }, value: "+45%" },
+      { label: { fr: "PORTÉE MENSUELLE", en: "MONTHLY REACH" }, value: "150k+" },
+      { label: { fr: "RÉPONSE CLIENT", en: "RESPONSE TIME" }, value: "< 15 min" }
     ]
   }
 ];
@@ -264,21 +222,36 @@ const projectsData = [
 const certsData = [
   {
     id: "CERT-01",
-    title: { fr: "Full-Stack Web & Software Engineering", en: "Full-Stack Web & Software Engineering" },
-    issuer: "Certification Professionnelle / Tech Validation",
+    title: { fr: "Certification en JavaScript & Programmation Web", en: "JavaScript & Modern Web Programming Certification" },
+    issuer: "Accréditation Développement Web & Algorithmique",
     desc: {
-      fr: "Validation approfondie en architecture logicielle web, bases de données relationnelles et non-relationnelles, sécurité web et création d'APIs RESTful performantes.",
-      en: "Comprehensive validation in web software architecture, relational & NoSQL databases, web security protocols, and performant RESTful API construction."
+      fr: "Validation approfondie des compétences en JavaScript moderne (ES6+), programmation asynchrone (Promises, Async/Await), manipulation dynamique du DOM, architecture modulaire et intégration d'APIs REST.",
+      en: "In-depth validation of modern JavaScript (ES6+), asynchronous programming (Promises, Async/Await), dynamic DOM manipulation, modular architecture, and REST API integration."
     },
     skills: [
-      "JavaScript ES6+, TypeScript & Frameworks modernes",
-      "Conception d'APIs sécurisées (JWT, OAuth, CORS)",
-      "Bases de données SQL (PostgreSQL, MySQL) & ORM",
-      "Déploiement continu (CI/CD, Docker, Vercel)"
+      "JavaScript moderne (ES6+ / ESNext)",
+      "Programmation asynchrone (Fetch, Async/Await, Web APIs)",
+      "Architecture modulaire et POO / Design Patterns",
+      "Optimisation des performances et Debugging Chrome DevTools"
     ]
   },
   {
     id: "CERT-02",
+    title: { fr: "Développement Web & Architecture Logicielle", en: "Web Development & Software Architecture" },
+    issuer: "Certification Professionnelle / Tech Validation",
+    desc: {
+      fr: "Validation approfondie en architecture web, développement PHP, Python, bases de données relationnelles, sécurité web et création d'applications performantes.",
+      en: "Comprehensive validation in web architecture, PHP, Python development, relational databases, web security protocols, and performant application construction."
+    },
+    skills: [
+      "JavaScript, PHP, Python & Frameworks modernes",
+      "Conception d'APIs sécurisées (JWT, OAuth, CORS)",
+      "Bases de données SQL (MySQL, PostgreSQL) & ORM",
+      "Déploiement continu (CI/CD, Docker, Vercel)"
+    ]
+  },
+  {
+    id: "CERT-03",
     title: { fr: "Social Media & Community Management", en: "Social Media & Community Management" },
     issuer: "Spécialisation Stratégie d'Influence & Communautés",
     desc: {
@@ -293,7 +266,7 @@ const certsData = [
     ]
   },
   {
-    id: "CERT-03",
+    id: "CERT-04",
     title: { fr: "Digital Marketing, SEO & Ads Campaigns", en: "Digital Marketing, SEO & Ads Campaigns" },
     issuer: "Acquisition & Conversion Specialist",
     desc: {
@@ -308,7 +281,7 @@ const certsData = [
     ]
   },
   {
-    id: "CERT-04",
+    id: "CERT-05",
     title: { fr: "UI/UX Design & Frontend Engineering", en: "UI/UX Design & Frontend Engineering" },
     issuer: "Digital Product & Design Systems",
     desc: {
